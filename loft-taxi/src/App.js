@@ -4,24 +4,25 @@ import { Register } from './Pages/Register';
 import { Map } from './Pages/Map';
 import { Profile } from './Pages/Profile';
 
-const PAGES = {
-  login: <Login />,
-  register: <Register />,
-  map: <Map />,
-  profile: <Profile />
-}
-
 class App extends React.Component {
 
   state = { currentPage: "login" };
 
   navigateTo = (page) => {
     this.setState({ currentPage: page });
+    console.log("navigateTo: " + page);
   };
+
+  PAGES = {
+      login: <Login navigateTo={this.navigateTo} />,
+      register: <Register navigateTo={this.navigateTo} />,
+      map: <Map />,
+      profile: <Profile />
+  }
 
   render() {
     return <>
-      <header>
+      <header className="header">
         <nav>
           <ul>
             <li>
@@ -61,7 +62,7 @@ class App extends React.Component {
       </header>
       <main>
         <section>
-          {PAGES[this.state.currentPage]}
+          {this.PAGES[this.state.currentPage]}
         </section>
       </main>
     </>
