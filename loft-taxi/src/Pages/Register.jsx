@@ -16,14 +16,14 @@ export const Register = (props) => {
                     }
                     }>Войти</span></p>
 
-                    <label htmlFor="email">Адрес электронной почты</label><br />
+                    <label htmlFor="email">Адрес электронной почты*</label><br />
                     <input className="input-text" id="email" type="email" name="email" size="28" /><br />
 
-                    <label className="short-input" htmlFor="Name">Имя</label><label className="short-input" htmlFor="Surname">Фамилия</label><br />
+                    <label className="short-input" htmlFor="Name">Имя*</label><label className="short-input" htmlFor="Surname">Фамилия*</label><br />
                     <input className="input-text short-input" id="Name" type="text" name="name" size="28"/>                   
                     <input className="input-text short-input" id="Surname" type="text" name="surname" size="28" /><br />
 
-                    <label htmlFor="password">Пароль</label><br />
+                    <label htmlFor="password">Пароль*</label><br />
                     <input className="input-text" id="password" type="password" name="password" size="28" /><br /><br />
                     <input className="input-button" id="registerButton" type="submit" name="registerButton" value="Зарегистрироваться" size="28" onClick={() => {
                         props.navigateTo("map");
