@@ -3,6 +3,7 @@ import { Login } from './Pages/Login';
 import { Register } from './Pages/Register';
 import { Map } from './Pages/Map';
 import { Profile } from './Pages/Profile';
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
 
