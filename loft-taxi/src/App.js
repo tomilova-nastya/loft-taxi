@@ -23,7 +23,7 @@ class App extends React.Component {
 
   render() {
     return <>
-      <header className="header">
+      <header className="header" style={{display:"none"}}>
         <nav>
           <ul>
             <li>
