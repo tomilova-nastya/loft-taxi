@@ -2,7 +2,9 @@ import React from 'react';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibmFzdGFzc2phdG9taWxvdmEiLCJhIjoiY2tmcXYxbzB2MG9xajJ4bXRmajdkOG9ndSJ9.C_hEs0TRF88ckid55IGWGQ';
+
 export class Map extends React.Component {
+
     componentDidMount() {
       this.map = new mapboxgl.Map({
         container: this.mapContainer,
@@ -15,15 +17,12 @@ export class Map extends React.Component {
     componentWillUnmount() {
       this.map.remove();
     }
+
+    setMapContainer = (element) => {
+        this.mapContainer = element;
+    }
   
     render() {
-      const style = {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        width: '100%'
-      };
-  
-      return <div style={style} ref={el => this.mapContainer = el} />;
+        return <div className="mapContainer" ref={this.setMapContainer} />;
     }
   }

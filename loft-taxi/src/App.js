@@ -15,15 +15,15 @@ class App extends React.Component {
   };
 
   PAGES = {
-      login: <Login navigateTo={this.navigateTo} />,
-      register: <Register navigateTo={this.navigateTo} />,
-      map: <Map />,
-      profile: <Profile />
+    login: <Login navigateTo={this.navigateTo} />,
+    register: <Register navigateTo={this.navigateTo} />,
+    map: <Map />,
+    profile: <Profile />
   }
 
   render() {
     return <>
-      <header className="header" style={{display:"none"}}>
+      <header className="header" style={{ display: "none" }}>
         <nav>
           <ul>
             <li>
@@ -62,9 +62,7 @@ class App extends React.Component {
         </nav>
       </header>
       <main>
-        <section>
-          {this.PAGES[this.state.currentPage]}
-        </section>
+        {this.PAGES[this.state.currentPage]}
       </main>
     </>
   }
