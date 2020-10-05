@@ -1,5 +1,6 @@
 import React from 'react';
 import {Logo, MCIcon} from 'loft-taxi-mui-theme';
+import PropTypes from 'prop-types';
 
 export const Login = (props) => {
     return (
@@ -27,4 +28,8 @@ export const Login = (props) => {
             </div>
         </div>
     )
-}
+};
+
+Login.propTypes = {
+    navigateTo: PropTypes.func.isRequired
+};

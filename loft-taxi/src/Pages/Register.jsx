@@ -1,5 +1,6 @@
 import React from 'react';
 import { Logo, MCIcon } from 'loft-taxi-mui-theme';
+import PropTypes from 'prop-types';
 
 export const Register = (props) => {
     return (
@@ -33,3 +34,7 @@ export const Register = (props) => {
         </div>
     )
 }
+
+Register.propTypes = {
+    navigateTo: PropTypes.func.isRequired
+};
